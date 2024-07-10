@@ -1,1 +1,23 @@
-fastapi[all]
+#Python 3.11
+langchain
+langchain-openai
+langchain-groq
+langchain-community
+langchain-google-community
+google-auth-httplib2
+tavily-python
+tiktoken
+langchainhub
+langgraph
+python-dotenv
+langchain-chroma
+bs4
+huggingface_hub
+unstructured
+sentence_transformers
+fastapi
+pydantic==1.10.13
+langchain-pinecone
+fastembed
+langserve
+sse_starlette
