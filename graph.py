@@ -22,6 +22,11 @@ from langgraph.graph import END, StateGraph
 from typing_extensions import TypedDict
 from typing import List
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 load_dotenv()
