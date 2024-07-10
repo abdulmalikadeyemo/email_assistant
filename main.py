@@ -1,14 +1,16 @@
-from typing import Optional
-
 from fastapi import FastAPI
+from langserve import add_routes
 
-app = FastAPI()
 
+from graph import graph_app
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+app = FastAPI(
+    title="LangChain Server",
+    version="1.0",
+    description="A simple api server using Langchain's Runnable interfaces",
+)
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+add_routes(
+    app,
+    graph_app
+)
