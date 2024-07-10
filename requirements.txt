@@ -21,3 +21,4 @@ langchain-pinecone
 fastembed
 langserve
 sse_starlette
+pysqlite3-binary
